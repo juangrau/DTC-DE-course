@@ -17,8 +17,11 @@ Which tag has the following text? - Automatically remove the container when it e
 --rm
 
 **Answer**
+
 I executed the following command:
+
   docker run --help|grep Automatically
+  
     --rm                             Automatically remove the container
 
 So the answer is **--rm**
@@ -33,9 +36,13 @@ What is version of the package wheel ?
 58.1.0
 
 **Answer**
+
 I executed the following commands:
+
   $ docker run -it --entrypoint=bash python:3.9
+  
   root@4db51e6f5d64:/# pip list |grep wheel
+  
   wheel      0.42.0
 
 So the answer if **0.42.0**
@@ -43,15 +50,20 @@ So the answer if **0.42.0**
 ### Question 3. Count records
 
 How many taxi trips were totally made on September 18th 2019?
+
 Tip: started and finished on 2019-09-18.
+
 Remember that lpep_pickup_datetime and lpep_dropoff_datetime columns are in the format timestamp (date and hour+min+sec) and not in date.
+
 15767
 15612
 15859
 89009
 
 **Answer**
+
 After loading the data on the database, I executed the following query:
+
   select 
   	lpep_dropoff_datetime::date,
   	lpep_pickup_datetime::date,
