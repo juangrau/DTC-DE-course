@@ -53,7 +53,7 @@ What's the output of the command for creating a topic?
 To create a topic the following command must be excecuted:
 
 ```
-rpk topic create [topic_name] --partitions 1 --replicas 1
+rpk topic create test-topic --partitions 1 --replicas 1
 ```
 
 The response was the following:
